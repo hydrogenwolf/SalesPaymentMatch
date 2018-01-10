@@ -1,0 +1,386 @@
+﻿@model SalesSite.Models.PaymentAuctionGmarket
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PaymentAuctionGmarket</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RegistrationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegistrationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.아이디)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.아이디)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.구매결정일자)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.구매결정일자)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.주문번호)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.주문번호)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.상품번호)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.상품번호)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.정산상태)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.정산상태)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.판매금액)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.판매금액)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.판매단가)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.판매단가)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.구매자명)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.구매자명)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.구매자ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.구매자ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.상품명)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.상품명)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.수량)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.수량)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.주문옵션)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.주문옵션)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.추가구성)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.추가구성)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.사은품)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.사은품)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.수령인명)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.수령인명)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.수령인_휴대폰)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.수령인_휴대폰)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.수령인_전화번호)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.수령인_전화번호)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.배송번호)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.배송번호)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.배송비_금액)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.배송비_금액)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.발송일자)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.발송일자)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.배송완료일자)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.배송완료일자)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.택배사명_발송방법_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.택배사명_발송방법_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.송장번호)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.송장번호)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.구매자_휴대폰)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.구매자_휴대폰)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.구매자_전화번호)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.구매자_전화번호)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.장바구니번호_결제번호_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.장바구니번호_결제번호_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.주문일자_결제확인전_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.주문일자_결제확인전_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.판매자_관리코드)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.판매자_관리코드)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.판매자_상세관리코드)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.판매자_상세관리코드)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.서비스이용료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.서비스이용료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.정산예정금액)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.정산예정금액)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.주문확인일자)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.주문확인일자)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.판매자쿠폰할인)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.판매자쿠폰할인)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.스마일포인트적립)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.스마일포인트적립)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.일시불할인)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.일시불할인)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C_옥션_복수구매할인)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_옥션_복수구매할인)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C_옥션_우수회원할인)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_옥션_우수회원할인)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.결제완료일)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.결제완료일)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.정산완료일)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.정산완료일)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.배송구분)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.배송구분)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.주문종류)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.주문종류)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SKU번호_및_수량)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SKU번호_및_수량)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.글로벌샵구분)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.글로벌샵구분)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.해외배송여부)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.해외배송여부)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.제휴사명)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.제휴사명)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

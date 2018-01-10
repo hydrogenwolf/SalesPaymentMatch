@@ -1,0 +1,98 @@
+﻿@model SalesSite.Models.SalesNotPayment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SalesNotPayment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.일자)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.일자)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.송장번호)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.송장번호)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.수취인명)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.수취인명)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.제품명)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.제품명)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.수량)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.수량)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.공급가)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.공급가)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.택배비)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.택배비)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.주문구분)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.주문구분)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.주문번호)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.주문번호)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.상품코드)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.상품코드)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

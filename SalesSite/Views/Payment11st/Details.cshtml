@@ -1,0 +1,426 @@
+﻿@model SalesSite.Models.Payment11st
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Payment11st</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RegistrationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegistrationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.주문번호)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.주문번호)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.주문순번)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.주문순번)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.배송번호)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.배송번호)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.주문상태)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.주문상태)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.구매자명)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.구매자명)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.구매자ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.구매자ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.결제완료일)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.결제완료일)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.발송처리일)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.발송처리일)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.배송완료일)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.배송완료일)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.수취확인일)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.수취확인일)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.송금완료일)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.송금완료일)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.상품번호)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.상품번호)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.상품명)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.상품명)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.옵션명)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.옵션명)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.수량)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.수량)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.정산금액)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.정산금액)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.판매금액합계)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.판매금액합계)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.추가정산금액합계)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.추가정산금액합계)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.공제금액합계)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.공제금액합계)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.판매가)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.판매가)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.옵션가)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.옵션가)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.선결제배송비)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.선결제배송비)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.도서산간배송비)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.도서산간배송비)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.구매자부담_반품_교환배송비)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.구매자부담_반품_교환배송비)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.반품_교환추가금)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.반품_교환추가금)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.반품선결제배송비)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.반품선결제배송비)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.반품도서산간배송비)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.반품도서산간배송비)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.해외취소배송비)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.해외취소배송비)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.티켓예매수수료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.티켓예매수수료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.티켓취소예매수수료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.티켓취소예매수수료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.티켓취소위약금)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.티켓취소위약금)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.여행취소위약금)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.여행취소위약금)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.송장번호)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.송장번호)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.서비스이용료정책)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.서비스이용료정책)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.기본서비스이용율)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.기본서비스이용율)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.서비스이용료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.서비스이용료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.할인쿠폰이용료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.할인쿠폰이용료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.판매자기본할인)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.판매자기본할인)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.판매자추가할인)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.판매자추가할인)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C11번가할인)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C11번가할인)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.복수구매할인비용)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.복수구매할인비용)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.포인트이용료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.포인트이용료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.칩이용료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.칩이용료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.무이자할부이용료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.무이자할부이용료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.후불광고비)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.후불광고비)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OK캐쉬백_적립부담액)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OK캐쉬백_적립부담액)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.지정택배이용료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.지정택배이용료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.전세계배송_판매자책임반품)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.전세계배송_판매자책임반품)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.수출대행수수료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.수출대행수수료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.물류이용수수료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.물류이용수수료)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

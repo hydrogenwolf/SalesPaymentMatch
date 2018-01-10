@@ -1,0 +1,400 @@
+﻿@model SalesSite.Models.PaymentAuctionGmarket
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>PaymentAuctionGmarket</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.RegistrationDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.RegistrationDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.RegistrationDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.아이디, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.아이디, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.아이디, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.구매결정일자, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.구매결정일자, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.구매결정일자, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.주문번호, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.주문번호, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.주문번호, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.상품번호, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.상품번호, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.상품번호, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.정산상태, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.정산상태, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.정산상태, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.판매금액, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.판매금액, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.판매금액, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.판매단가, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.판매단가, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.판매단가, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.구매자명, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.구매자명, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.구매자명, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.구매자ID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.구매자ID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.구매자ID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.상품명, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.상품명, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.상품명, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.수량, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.수량, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.수량, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.주문옵션, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.주문옵션, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.주문옵션, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.추가구성, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.추가구성, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.추가구성, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.사은품, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.사은품, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.사은품, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.수령인명, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.수령인명, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.수령인명, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.수령인_휴대폰, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.수령인_휴대폰, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.수령인_휴대폰, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.수령인_전화번호, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.수령인_전화번호, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.수령인_전화번호, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.배송번호, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.배송번호, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.배송번호, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.배송비_금액, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.배송비_금액, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.배송비_금액, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.발송일자, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.발송일자, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.발송일자, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.배송완료일자, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.배송완료일자, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.배송완료일자, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.택배사명_발송방법_, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.택배사명_발송방법_, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.택배사명_발송방법_, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.송장번호, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.송장번호, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.송장번호, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.구매자_휴대폰, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.구매자_휴대폰, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.구매자_휴대폰, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.구매자_전화번호, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.구매자_전화번호, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.구매자_전화번호, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.장바구니번호_결제번호_, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.장바구니번호_결제번호_, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.장바구니번호_결제번호_, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.주문일자_결제확인전_, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.주문일자_결제확인전_, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.주문일자_결제확인전_, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.판매자_관리코드, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.판매자_관리코드, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.판매자_관리코드, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.판매자_상세관리코드, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.판매자_상세관리코드, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.판매자_상세관리코드, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.서비스이용료, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.서비스이용료, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.서비스이용료, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.정산예정금액, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.정산예정금액, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.정산예정금액, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.주문확인일자, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.주문확인일자, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.주문확인일자, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.판매자쿠폰할인, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.판매자쿠폰할인, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.판매자쿠폰할인, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.스마일포인트적립, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.스마일포인트적립, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.스마일포인트적립, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.일시불할인, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.일시불할인, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.일시불할인, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.C_옥션_복수구매할인, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.C_옥션_복수구매할인, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.C_옥션_복수구매할인, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.C_옥션_우수회원할인, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.C_옥션_우수회원할인, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.C_옥션_우수회원할인, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.결제완료일, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.결제완료일, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.결제완료일, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.정산완료일, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.정산완료일, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.정산완료일, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.배송구분, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.배송구분, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.배송구분, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.주문종류, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.주문종류, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.주문종류, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SKU번호_및_수량, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SKU번호_및_수량, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SKU번호_및_수량, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.글로벌샵구분, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.글로벌샵구분, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.글로벌샵구분, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.해외배송여부, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.해외배송여부, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.해외배송여부, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.제휴사명, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.제휴사명, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.제휴사명, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

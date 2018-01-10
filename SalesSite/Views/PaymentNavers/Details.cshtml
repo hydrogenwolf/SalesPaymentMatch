@@ -1,0 +1,202 @@
+﻿@model SalesSite.Models.PaymentNaver
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PaymentNaver</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RegistrationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegistrationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.주문번호)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.주문번호)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.상품주문번호)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.상품주문번호)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.구분)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.구분)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.상품명)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.상품명)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.구매자명)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.구매자명)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.결제금액_정산예정일)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.결제금액_정산예정일)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.결제금액_정산완료일)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.결제금액_정산완료일)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.결제금액_정산기준일)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.결제금액_정산기준일)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.정산구분)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.정산구분)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.결제금액)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.결제금액)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.결제수수료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.결제수수료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.주결제수단)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.주결제수단)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.주결제수단_금액)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.주결제수단_금액)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.주결제수단_수수료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.주결제수단_수수료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.보조결제수단_금액)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.보조결제수단_금액)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.보조결제수단_수수료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.보조결제수단_수수료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.매출_연동_수수료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.매출_연동_수수료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.채널수수료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.채널수수료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.무이자할부수수료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.무이자할부수수료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C_구_판매수수료)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_구_판매수수료)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.혜택금액)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.혜택금액)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.정산예정금액)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.정산예정금액)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

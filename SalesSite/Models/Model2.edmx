@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Payment11st">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegistrationDate" Type="datetime" Nullable="false" />
+          <Property Name="주문번호" Type="nvarchar" MaxLength="255" />
+          <Property Name="주문순번" Type="int" />
+          <Property Name="배송번호" Type="nvarchar" MaxLength="255" />
+          <Property Name="주문상태" Type="nvarchar" MaxLength="255" />
+          <Property Name="구매자명" Type="nvarchar" MaxLength="255" />
+          <Property Name="구매자ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="결제완료일" Type="datetime" />
+          <Property Name="발송처리일" Type="datetime" />
+          <Property Name="배송완료일" Type="datetime" />
+          <Property Name="수취확인일" Type="datetime" />
+          <Property Name="송금완료일" Type="datetime" />
+          <Property Name="상품번호" Type="nvarchar" MaxLength="255" />
+          <Property Name="상품명" Type="nvarchar" MaxLength="255" />
+          <Property Name="옵션명" Type="nvarchar" MaxLength="255" />
+          <Property Name="수량" Type="int" />
+          <Property Name="정산금액" Type="int" />
+          <Property Name="판매금액합계" Type="int" />
+          <Property Name="추가정산금액합계" Type="int" />
+          <Property Name="공제금액합계" Type="int" />
+          <Property Name="판매가" Type="int" />
+          <Property Name="옵션가" Type="int" />
+          <Property Name="선결제배송비" Type="int" />
+          <Property Name="도서산간배송비" Type="int" />
+          <Property Name="구매자부담 반품/교환배송비" Type="int" />
+          <Property Name="반품/교환추가금" Type="int" />
+          <Property Name="반품선결제배송비" Type="int" />
+          <Property Name="반품도서산간배송비" Type="int" />
+          <Property Name="해외취소배송비" Type="int" />
+          <Property Name="티켓예매수수료" Type="int" />
+          <Property Name="티켓취소예매수수료" Type="int" />
+          <Property Name="티켓취소위약금" Type="int" />
+          <Property Name="여행취소위약금" Type="int" />
+          <Property Name="송장번호" Type="nvarchar" MaxLength="255" />
+          <Property Name="서비스이용료정책" Type="nvarchar" MaxLength="255" />
+          <Property Name="기본서비스이용율" Type="nvarchar" MaxLength="255" />
+          <Property Name="서비스이용료" Type="int" />
+          <Property Name="할인쿠폰이용료" Type="int" />
+          <Property Name="판매자기본할인" Type="int" />
+          <Property Name="판매자추가할인" Type="int" />
+          <Property Name="11번가할인" Type="int" />
+          <Property Name="복수구매할인비용" Type="int" />
+          <Property Name="포인트이용료" Type="int" />
+          <Property Name="칩이용료" Type="int" />
+          <Property Name="무이자할부이용료" Type="int" />
+          <Property Name="후불광고비" Type="int" />
+          <Property Name="OK캐쉬백 적립부담액" Type="int" />
+          <Property Name="지정택배이용료" Type="int" />
+          <Property Name="전세계배송 판매자책임반품" Type="int" />
+          <Property Name="수출대행수수료" Type="int" />
+          <Property Name="물류이용수수료" Type="int" />
+        </EntityType>
+        <EntityType Name="PaymentAuctionGmarket">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegistrationDate" Type="datetime" Nullable="false" />
+          <Property Name="아이디" Type="nvarchar" MaxLength="255" />
+          <Property Name="구매결정일자" Type="datetime" />
+          <Property Name="주문번호" Type="nvarchar" MaxLength="255" />
+          <Property Name="상품번호" Type="nvarchar" MaxLength="255" />
+          <Property Name="정산상태" Type="nvarchar" MaxLength="255" />
+          <Property Name="판매금액" Type="int" />
+          <Property Name="판매단가" Type="int" />
+          <Property Name="구매자명" Type="nvarchar" MaxLength="255" />
+          <Property Name="구매자ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="상품명" Type="nvarchar" MaxLength="255" />
+          <Property Name="수량" Type="int" />
+          <Property Name="주문옵션" Type="nvarchar" MaxLength="255" />
+          <Property Name="추가구성" Type="nvarchar" MaxLength="255" />
+          <Property Name="사은품" Type="nvarchar" MaxLength="255" />
+          <Property Name="수령인명" Type="nvarchar" MaxLength="255" />
+          <Property Name="수령인 휴대폰" Type="nvarchar" MaxLength="255" />
+          <Property Name="수령인 전화번호" Type="nvarchar" MaxLength="255" />
+          <Property Name="배송번호" Type="nvarchar" MaxLength="255" />
+          <Property Name="배송비 금액" Type="int" />
+          <Property Name="발송일자" Type="datetime" />
+          <Property Name="배송완료일자" Type="datetime" />
+          <Property Name="택배사명(발송방법)" Type="nvarchar" MaxLength="255" />
+          <Property Name="송장번호" Type="nvarchar" MaxLength="255" />
+          <Property Name="구매자 휴대폰" Type="nvarchar" MaxLength="255" />
+          <Property Name="구매자 전화번호" Type="nvarchar" MaxLength="255" />
+          <Property Name="장바구니번호(결제번호)" Type="nvarchar" MaxLength="255" />
+          <Property Name="주문일자(결제확인전)" Type="datetime" />
+          <Property Name="판매자 관리코드" Type="nvarchar" MaxLength="255" />
+          <Property Name="판매자 상세관리코드" Type="nvarchar" MaxLength="255" />
+          <Property Name="서비스이용료" Type="int" />
+          <Property Name="정산예정금액" Type="int" />
+          <Property Name="주문확인일자" Type="datetime" />
+          <Property Name="판매자쿠폰할인" Type="int" />
+          <Property Name="스마일포인트적립" Type="nvarchar" MaxLength="255" />
+          <Property Name="일시불할인" Type="nvarchar" MaxLength="255" />
+          <Property Name="(옥션)복수구매할인" Type="nvarchar" MaxLength="255" />
+          <Property Name="(옥션)우수회원할인" Type="nvarchar" MaxLength="255" />
+          <Property Name="결제완료일" Type="datetime" />
+          <Property Name="정산완료일" Type="datetime" />
+          <Property Name="배송구분" Type="nvarchar" MaxLength="255" />
+          <Property Name="주문종류" Type="nvarchar" MaxLength="255" />
+          <Property Name="SKU번호 및 수량" Type="nvarchar" MaxLength="255" />
+          <Property Name="글로벌샵구분" Type="nvarchar" MaxLength="255" />
+          <Property Name="해외배송여부" Type="nvarchar" MaxLength="255" />
+          <Property Name="제휴사명" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="PaymentNaver">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegistrationDate" Type="datetime" Nullable="false" />
+          <Property Name="주문번호" Type="nvarchar" MaxLength="255" />
+          <Property Name="상품주문번호" Type="nvarchar" MaxLength="255" />
+          <Property Name="구분" Type="nvarchar" MaxLength="255" />
+          <Property Name="상품명" Type="nvarchar" MaxLength="255" />
+          <Property Name="구매자명" Type="nvarchar" MaxLength="255" />
+          <Property Name="결제금액 정산예정일" Type="datetime" />
+          <Property Name="결제금액 정산완료일" Type="datetime" />
+          <Property Name="결제금액 정산기준일" Type="datetime" />
+          <Property Name="정산구분" Type="nvarchar" MaxLength="255" />
+          <Property Name="결제금액" Type="int" />
+          <Property Name="결제수수료" Type="int" />
+          <Property Name="주결제수단" Type="nvarchar" MaxLength="255" />
+          <Property Name="주결제수단 금액" Type="int" />
+          <Property Name="주결제수단 수수료" Type="int" />
+          <Property Name="보조결제수단 금액" Type="int" />
+          <Property Name="보조결제수단 수수료" Type="int" />
+          <Property Name="매출 연동 수수료" Type="int" />
+          <Property Name="채널수수료" Type="int" />
+          <Property Name="무이자할부수수료" Type="int" />
+          <Property Name="(구)판매수수료" Type="int" />
+          <Property Name="혜택금액" Type="int" />
+          <Property Name="정산예정금액" Type="int" />
+        </EntityType>
+        <!--생성 중 오류 발생:
+경고 6002: 테이블/뷰 'Noition.dbo.SalesMarket'에 기본 키가 정의되지 않았습니다. 키가 유추되었고 읽기 전용 테이블/뷰로 정의되었습니다.-->
+        <EntityType Name="SalesMarket">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Market" />
+            <PropertyRef Name="RegistrationDate" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Market" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="PaymentDate" Type="datetime" />
+          <Property Name="RegistrationDate" Type="datetime" Nullable="false" />
+          <Property Name="일자" Type="datetime" />
+          <Property Name="송장번호" Type="nvarchar" MaxLength="255" />
+          <Property Name="수취인명" Type="nvarchar" MaxLength="255" />
+          <Property Name="제품명" Type="nvarchar" MaxLength="255" />
+          <Property Name="수량" Type="int" />
+          <Property Name="공급가" Type="int" />
+          <Property Name="택배비" Type="int" />
+          <Property Name="주문구분" Type="nvarchar" MaxLength="255" />
+          <Property Name="주문번호" Type="nvarchar" MaxLength="255" />
+          <Property Name="상품코드" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--생성 중 오류 발생:
+경고 6002: 테이블/뷰 'Noition.dbo.SalesNotPayment'에 기본 키가 정의되지 않았습니다. 키가 유추되었고 읽기 전용 테이블/뷰로 정의되었습니다.-->
+        <EntityType Name="SalesNotPayment">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="RegistrationDate" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegistrationDate" Type="datetime" Nullable="false" />
+          <Property Name="일자" Type="datetime" />
+          <Property Name="송장번호" Type="nvarchar" MaxLength="255" />
+          <Property Name="수취인명" Type="nvarchar" MaxLength="255" />
+          <Property Name="제품명" Type="nvarchar" MaxLength="255" />
+          <Property Name="수량" Type="int" />
+          <Property Name="공급가" Type="int" />
+          <Property Name="택배비" Type="int" />
+          <Property Name="주문구분" Type="nvarchar" MaxLength="255" />
+          <Property Name="주문번호" Type="nvarchar" MaxLength="255" />
+          <Property Name="상품코드" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="Model2StoreContainer">
+          <EntitySet Name="Payment11st" EntityType="Self.Payment11st" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PaymentAuctionGmarket" EntityType="Self.PaymentAuctionGmarket" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PaymentNaver" EntityType="Self.PaymentNaver" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SalesMarket" EntityType="Self.SalesMarket" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SalesMarket].[ID] AS [ID], 
+    [SalesMarket].[Market] AS [Market], 
+    [SalesMarket].[PaymentDate] AS [PaymentDate], 
+    [SalesMarket].[RegistrationDate] AS [RegistrationDate], 
+    [SalesMarket].[일자] AS [일자], 
+    [SalesMarket].[송장번호] AS [송장번호], 
+    [SalesMarket].[수취인명] AS [수취인명], 
+    [SalesMarket].[제품명] AS [제품명], 
+    [SalesMarket].[수량] AS [수량], 
+    [SalesMarket].[공급가] AS [공급가], 
+    [SalesMarket].[택배비] AS [택배비], 
+    [SalesMarket].[주문구분] AS [주문구분], 
+    [SalesMarket].[주문번호] AS [주문번호], 
+    [SalesMarket].[상품코드] AS [상품코드]
+    FROM [dbo].[SalesMarket] AS [SalesMarket]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SalesNotPayment" EntityType="Self.SalesNotPayment" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SalesNotPayment].[ID] AS [ID], 
+    [SalesNotPayment].[RegistrationDate] AS [RegistrationDate], 
+    [SalesNotPayment].[일자] AS [일자], 
+    [SalesNotPayment].[송장번호] AS [송장번호], 
+    [SalesNotPayment].[수취인명] AS [수취인명], 
+    [SalesNotPayment].[제품명] AS [제품명], 
+    [SalesNotPayment].[수량] AS [수량], 
+    [SalesNotPayment].[공급가] AS [공급가], 
+    [SalesNotPayment].[택배비] AS [택배비], 
+    [SalesNotPayment].[주문구분] AS [주문구분], 
+    [SalesNotPayment].[주문번호] AS [주문번호], 
+    [SalesNotPayment].[상품코드] AS [상품코드]
+    FROM [dbo].[SalesNotPayment] AS [SalesNotPayment]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SalesMarket">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Market" />
+            <PropertyRef Name="RegistrationDate" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Market" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RegistrationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="일자" Type="DateTime" Precision="3" />
+          <Property Name="송장번호" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="수취인명" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="제품명" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="수량" Type="Int32" />
+          <Property Name="공급가" Type="Int32" />
+          <Property Name="택배비" Type="Int32" />
+          <Property Name="주문구분" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="주문번호" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="상품코드" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SalesNotPayment">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="RegistrationDate" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegistrationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="일자" Type="DateTime" Precision="3" />
+          <Property Name="송장번호" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="수취인명" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="제품명" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="수량" Type="Int32" />
+          <Property Name="공급가" Type="Int32" />
+          <Property Name="택배비" Type="Int32" />
+          <Property Name="주문구분" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="주문번호" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="상품코드" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="NoitionEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SalesMarket" EntityType="Self.SalesMarket" />
+          <EntitySet Name="SalesNotPayment" EntityType="Self.SalesNotPayment" />
+          <EntitySet Name="Payment11st" EntityType="Model2.Payment11st" />
+          <EntitySet Name="PaymentAuctionGmarket" EntityType="Model2.PaymentAuctionGmarket" />
+          <EntitySet Name="PaymentNaver" EntityType="Model2.PaymentNaver" />
+        </EntityContainer>
+        <EntityType Name="Payment11st">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegistrationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="주문번호" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="주문순번" Type="Int32" />
+          <Property Name="배송번호" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="주문상태" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="구매자명" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="구매자ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="결제완료일" Type="DateTime" Precision="3" />
+          <Property Name="발송처리일" Type="DateTime" Precision="3" />
+          <Property Name="배송완료일" Type="DateTime" Precision="3" />
+          <Property Name="수취확인일" Type="DateTime" Precision="3" />
+          <Property Name="송금완료일" Type="DateTime" Precision="3" />
+          <Property Name="상품번호" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="상품명" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="옵션명" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="수량" Type="Int32" />
+          <Property Name="정산금액" Type="Int32" />
+          <Property Name="판매금액합계" Type="Int32" />
+          <Property Name="추가정산금액합계" Type="Int32" />
+          <Property Name="공제금액합계" Type="Int32" />
+          <Property Name="판매가" Type="Int32" />
+          <Property Name="옵션가" Type="Int32" />
+          <Property Name="선결제배송비" Type="Int32" />
+          <Property Name="도서산간배송비" Type="Int32" />
+          <Property Name="구매자부담_반품_교환배송비" Type="Int32" />
+          <Property Name="반품_교환추가금" Type="Int32" />
+          <Property Name="반품선결제배송비" Type="Int32" />
+          <Property Name="반품도서산간배송비" Type="Int32" />
+          <Property Name="해외취소배송비" Type="Int32" />
+          <Property Name="티켓예매수수료" Type="Int32" />
+          <Property Name="티켓취소예매수수료" Type="Int32" />
+          <Property Name="티켓취소위약금" Type="Int32" />
+          <Property Name="여행취소위약금" Type="Int32" />
+          <Property Name="송장번호" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="서비스이용료정책" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="기본서비스이용율" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="서비스이용료" Type="Int32" />
+          <Property Name="할인쿠폰이용료" Type="Int32" />
+          <Property Name="판매자기본할인" Type="Int32" />
+          <Property Name="판매자추가할인" Type="Int32" />
+          <Property Name="C11번가할인" Type="Int32" />
+          <Property Name="복수구매할인비용" Type="Int32" />
+          <Property Name="포인트이용료" Type="Int32" />
+          <Property Name="칩이용료" Type="Int32" />
+          <Property Name="무이자할부이용료" Type="Int32" />
+          <Property Name="후불광고비" Type="Int32" />
+          <Property Name="OK캐쉬백_적립부담액" Type="Int32" />
+          <Property Name="지정택배이용료" Type="Int32" />
+          <Property Name="전세계배송_판매자책임반품" Type="Int32" />
+          <Property Name="수출대행수수료" Type="Int32" />
+          <Property Name="물류이용수수료" Type="Int32" />
+        </EntityType>
+        <EntityType Name="PaymentAuctionGmarket">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegistrationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="아이디" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="구매결정일자" Type="DateTime" Precision="3" />
+          <Property Name="주문번호" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="상품번호" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="정산상태" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="판매금액" Type="Int32" />
+          <Property Name="판매단가" Type="Int32" />
+          <Property Name="구매자명" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="구매자ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="상품명" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="수량" Type="Int32" />
+          <Property Name="주문옵션" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="추가구성" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="사은품" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="수령인명" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="수령인_휴대폰" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="수령인_전화번호" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="배송번호" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="배송비_금액" Type="Int32" />
+          <Property Name="발송일자" Type="DateTime" Precision="3" />
+          <Property Name="배송완료일자" Type="DateTime" Precision="3" />
+          <Property Name="택배사명_발송방법_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="송장번호" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="구매자_휴대폰" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="구매자_전화번호" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="장바구니번호_결제번호_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="주문일자_결제확인전_" Type="DateTime" Precision="3" />
+          <Property Name="판매자_관리코드" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="판매자_상세관리코드" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="서비스이용료" Type="Int32" />
+          <Property Name="정산예정금액" Type="Int32" />
+          <Property Name="주문확인일자" Type="DateTime" Precision="3" />
+          <Property Name="판매자쿠폰할인" Type="Int32" />
+          <Property Name="스마일포인트적립" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="일시불할인" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="C_옥션_복수구매할인" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="C_옥션_우수회원할인" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="결제완료일" Type="DateTime" Precision="3" />
+          <Property Name="정산완료일" Type="DateTime" Precision="3" />
+          <Property Name="배송구분" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="주문종류" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SKU번호_및_수량" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="글로벌샵구분" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="해외배송여부" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="제휴사명" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PaymentNaver">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegistrationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="주문번호" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="상품주문번호" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="구분" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="상품명" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="구매자명" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="결제금액_정산예정일" Type="DateTime" Precision="3" />
+          <Property Name="결제금액_정산완료일" Type="DateTime" Precision="3" />
+          <Property Name="결제금액_정산기준일" Type="DateTime" Precision="3" />
+          <Property Name="정산구분" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="결제금액" Type="Int32" />
+          <Property Name="결제수수료" Type="Int32" />
+          <Property Name="주결제수단" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="주결제수단_금액" Type="Int32" />
+          <Property Name="주결제수단_수수료" Type="Int32" />
+          <Property Name="보조결제수단_금액" Type="Int32" />
+          <Property Name="보조결제수단_수수료" Type="Int32" />
+          <Property Name="매출_연동_수수료" Type="Int32" />
+          <Property Name="채널수수료" Type="Int32" />
+          <Property Name="무이자할부수수료" Type="Int32" />
+          <Property Name="C_구_판매수수료" Type="Int32" />
+          <Property Name="혜택금액" Type="Int32" />
+          <Property Name="정산예정금액" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Model2StoreContainer" CdmEntityContainer="NoitionEntities2">
+          <EntitySetMapping Name="SalesMarket">
+            <EntityTypeMapping TypeName="Model2.SalesMarket">
+              <MappingFragment StoreEntitySet="SalesMarket">
+                <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Market" ColumnName="Market" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="일자" ColumnName="일자" />
+                <ScalarProperty Name="송장번호" ColumnName="송장번호" />
+                <ScalarProperty Name="수취인명" ColumnName="수취인명" />
+                <ScalarProperty Name="제품명" ColumnName="제품명" />
+                <ScalarProperty Name="수량" ColumnName="수량" />
+                <ScalarProperty Name="공급가" ColumnName="공급가" />
+                <ScalarProperty Name="택배비" ColumnName="택배비" />
+                <ScalarProperty Name="주문구분" ColumnName="주문구분" />
+                <ScalarProperty Name="주문번호" ColumnName="주문번호" />
+                <ScalarProperty Name="상품코드" ColumnName="상품코드" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SalesNotPayment">
+            <EntityTypeMapping TypeName="Model2.SalesNotPayment">
+              <MappingFragment StoreEntitySet="SalesNotPayment">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="일자" ColumnName="일자" />
+                <ScalarProperty Name="송장번호" ColumnName="송장번호" />
+                <ScalarProperty Name="수취인명" ColumnName="수취인명" />
+                <ScalarProperty Name="제품명" ColumnName="제품명" />
+                <ScalarProperty Name="수량" ColumnName="수량" />
+                <ScalarProperty Name="공급가" ColumnName="공급가" />
+                <ScalarProperty Name="택배비" ColumnName="택배비" />
+                <ScalarProperty Name="주문구분" ColumnName="주문구분" />
+                <ScalarProperty Name="주문번호" ColumnName="주문번호" />
+                <ScalarProperty Name="상품코드" ColumnName="상품코드" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Payment11st">
+            <EntityTypeMapping TypeName="Model2.Payment11st">
+              <MappingFragment StoreEntitySet="Payment11st">
+                <ScalarProperty Name="물류이용수수료" ColumnName="물류이용수수료" />
+                <ScalarProperty Name="수출대행수수료" ColumnName="수출대행수수료" />
+                <ScalarProperty Name="전세계배송_판매자책임반품" ColumnName="전세계배송 판매자책임반품" />
+                <ScalarProperty Name="지정택배이용료" ColumnName="지정택배이용료" />
+                <ScalarProperty Name="OK캐쉬백_적립부담액" ColumnName="OK캐쉬백 적립부담액" />
+                <ScalarProperty Name="후불광고비" ColumnName="후불광고비" />
+                <ScalarProperty Name="무이자할부이용료" ColumnName="무이자할부이용료" />
+                <ScalarProperty Name="칩이용료" ColumnName="칩이용료" />
+                <ScalarProperty Name="포인트이용료" ColumnName="포인트이용료" />
+                <ScalarProperty Name="복수구매할인비용" ColumnName="복수구매할인비용" />
+                <ScalarProperty Name="C11번가할인" ColumnName="11번가할인" />
+                <ScalarProperty Name="판매자추가할인" ColumnName="판매자추가할인" />
+                <ScalarProperty Name="판매자기본할인" ColumnName="판매자기본할인" />
+                <ScalarProperty Name="할인쿠폰이용료" ColumnName="할인쿠폰이용료" />
+                <ScalarProperty Name="서비스이용료" ColumnName="서비스이용료" />
+                <ScalarProperty Name="기본서비스이용율" ColumnName="기본서비스이용율" />
+                <ScalarProperty Name="서비스이용료정책" ColumnName="서비스이용료정책" />
+                <ScalarProperty Name="송장번호" ColumnName="송장번호" />
+                <ScalarProperty Name="여행취소위약금" ColumnName="여행취소위약금" />
+                <ScalarProperty Name="티켓취소위약금" ColumnName="티켓취소위약금" />
+                <ScalarProperty Name="티켓취소예매수수료" ColumnName="티켓취소예매수수료" />
+                <ScalarProperty Name="티켓예매수수료" ColumnName="티켓예매수수료" />
+                <ScalarProperty Name="해외취소배송비" ColumnName="해외취소배송비" />
+                <ScalarProperty Name="반품도서산간배송비" ColumnName="반품도서산간배송비" />
+                <ScalarProperty Name="반품선결제배송비" ColumnName="반품선결제배송비" />
+                <ScalarProperty Name="반품_교환추가금" ColumnName="반품/교환추가금" />
+                <ScalarProperty Name="구매자부담_반품_교환배송비" ColumnName="구매자부담 반품/교환배송비" />
+                <ScalarProperty Name="도서산간배송비" ColumnName="도서산간배송비" />
+                <ScalarProperty Name="선결제배송비" ColumnName="선결제배송비" />
+                <ScalarProperty Name="옵션가" ColumnName="옵션가" />
+                <ScalarProperty Name="판매가" ColumnName="판매가" />
+                <ScalarProperty Name="공제금액합계" ColumnName="공제금액합계" />
+                <ScalarProperty Name="추가정산금액합계" ColumnName="추가정산금액합계" />
+                <ScalarProperty Name="판매금액합계" ColumnName="판매금액합계" />
+                <ScalarProperty Name="정산금액" ColumnName="정산금액" />
+                <ScalarProperty Name="수량" ColumnName="수량" />
+                <ScalarProperty Name="옵션명" ColumnName="옵션명" />
+                <ScalarProperty Name="상품명" ColumnName="상품명" />
+                <ScalarProperty Name="상품번호" ColumnName="상품번호" />
+                <ScalarProperty Name="송금완료일" ColumnName="송금완료일" />
+                <ScalarProperty Name="수취확인일" ColumnName="수취확인일" />
+                <ScalarProperty Name="배송완료일" ColumnName="배송완료일" />
+                <ScalarProperty Name="발송처리일" ColumnName="발송처리일" />
+                <ScalarProperty Name="결제완료일" ColumnName="결제완료일" />
+                <ScalarProperty Name="구매자ID" ColumnName="구매자ID" />
+                <ScalarProperty Name="구매자명" ColumnName="구매자명" />
+                <ScalarProperty Name="주문상태" ColumnName="주문상태" />
+                <ScalarProperty Name="배송번호" ColumnName="배송번호" />
+                <ScalarProperty Name="주문순번" ColumnName="주문순번" />
+                <ScalarProperty Name="주문번호" ColumnName="주문번호" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PaymentAuctionGmarket">
+            <EntityTypeMapping TypeName="Model2.PaymentAuctionGmarket">
+              <MappingFragment StoreEntitySet="PaymentAuctionGmarket">
+                <ScalarProperty Name="제휴사명" ColumnName="제휴사명" />
+                <ScalarProperty Name="해외배송여부" ColumnName="해외배송여부" />
+                <ScalarProperty Name="글로벌샵구분" ColumnName="글로벌샵구분" />
+                <ScalarProperty Name="SKU번호_및_수량" ColumnName="SKU번호 및 수량" />
+                <ScalarProperty Name="주문종류" ColumnName="주문종류" />
+                <ScalarProperty Name="배송구분" ColumnName="배송구분" />
+                <ScalarProperty Name="정산완료일" ColumnName="정산완료일" />
+                <ScalarProperty Name="결제완료일" ColumnName="결제완료일" />
+                <ScalarProperty Name="C_옥션_우수회원할인" ColumnName="(옥션)우수회원할인" />
+                <ScalarProperty Name="C_옥션_복수구매할인" ColumnName="(옥션)복수구매할인" />
+                <ScalarProperty Name="일시불할인" ColumnName="일시불할인" />
+                <ScalarProperty Name="스마일포인트적립" ColumnName="스마일포인트적립" />
+                <ScalarProperty Name="판매자쿠폰할인" ColumnName="판매자쿠폰할인" />
+                <ScalarProperty Name="주문확인일자" ColumnName="주문확인일자" />
+                <ScalarProperty Name="정산예정금액" ColumnName="정산예정금액" />
+                <ScalarProperty Name="서비스이용료" ColumnName="서비스이용료" />
+                <ScalarProperty Name="판매자_상세관리코드" ColumnName="판매자 상세관리코드" />
+                <ScalarProperty Name="판매자_관리코드" ColumnName="판매자 관리코드" />
+                <ScalarProperty Name="주문일자_결제확인전_" ColumnName="주문일자(결제확인전)" />
+                <ScalarProperty Name="장바구니번호_결제번호_" ColumnName="장바구니번호(결제번호)" />
+                <ScalarProperty Name="구매자_전화번호" ColumnName="구매자 전화번호" />
+                <ScalarProperty Name="구매자_휴대폰" ColumnName="구매자 휴대폰" />
+                <ScalarProperty Name="송장번호" ColumnName="송장번호" />
+                <ScalarProperty Name="택배사명_발송방법_" ColumnName="택배사명(발송방법)" />
+                <ScalarProperty Name="배송완료일자" ColumnName="배송완료일자" />
+                <ScalarProperty Name="발송일자" ColumnName="발송일자" />
+                <ScalarProperty Name="배송비_금액" ColumnName="배송비 금액" />
+                <ScalarProperty Name="배송번호" ColumnName="배송번호" />
+                <ScalarProperty Name="수령인_전화번호" ColumnName="수령인 전화번호" />
+                <ScalarProperty Name="수령인_휴대폰" ColumnName="수령인 휴대폰" />
+                <ScalarProperty Name="수령인명" ColumnName="수령인명" />
+                <ScalarProperty Name="사은품" ColumnName="사은품" />
+                <ScalarProperty Name="추가구성" ColumnName="추가구성" />
+                <ScalarProperty Name="주문옵션" ColumnName="주문옵션" />
+                <ScalarProperty Name="수량" ColumnName="수량" />
+                <ScalarProperty Name="상품명" ColumnName="상품명" />
+                <ScalarProperty Name="구매자ID" ColumnName="구매자ID" />
+                <ScalarProperty Name="구매자명" ColumnName="구매자명" />
+                <ScalarProperty Name="판매단가" ColumnName="판매단가" />
+                <ScalarProperty Name="판매금액" ColumnName="판매금액" />
+                <ScalarProperty Name="정산상태" ColumnName="정산상태" />
+                <ScalarProperty Name="상품번호" ColumnName="상품번호" />
+                <ScalarProperty Name="주문번호" ColumnName="주문번호" />
+                <ScalarProperty Name="구매결정일자" ColumnName="구매결정일자" />
+                <ScalarProperty Name="아이디" ColumnName="아이디" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PaymentNaver">
+            <EntityTypeMapping TypeName="Model2.PaymentNaver">
+              <MappingFragment StoreEntitySet="PaymentNaver">
+                <ScalarProperty Name="정산예정금액" ColumnName="정산예정금액" />
+                <ScalarProperty Name="혜택금액" ColumnName="혜택금액" />
+                <ScalarProperty Name="C_구_판매수수료" ColumnName="(구)판매수수료" />
+                <ScalarProperty Name="무이자할부수수료" ColumnName="무이자할부수수료" />
+                <ScalarProperty Name="채널수수료" ColumnName="채널수수료" />
+                <ScalarProperty Name="매출_연동_수수료" ColumnName="매출 연동 수수료" />
+                <ScalarProperty Name="보조결제수단_수수료" ColumnName="보조결제수단 수수료" />
+                <ScalarProperty Name="보조결제수단_금액" ColumnName="보조결제수단 금액" />
+                <ScalarProperty Name="주결제수단_수수료" ColumnName="주결제수단 수수료" />
+                <ScalarProperty Name="주결제수단_금액" ColumnName="주결제수단 금액" />
+                <ScalarProperty Name="주결제수단" ColumnName="주결제수단" />
+                <ScalarProperty Name="결제수수료" ColumnName="결제수수료" />
+                <ScalarProperty Name="결제금액" ColumnName="결제금액" />
+                <ScalarProperty Name="정산구분" ColumnName="정산구분" />
+                <ScalarProperty Name="결제금액_정산기준일" ColumnName="결제금액 정산기준일" />
+                <ScalarProperty Name="결제금액_정산완료일" ColumnName="결제금액 정산완료일" />
+                <ScalarProperty Name="결제금액_정산예정일" ColumnName="결제금액 정산예정일" />
+                <ScalarProperty Name="구매자명" ColumnName="구매자명" />
+                <ScalarProperty Name="상품명" ColumnName="상품명" />
+                <ScalarProperty Name="구분" ColumnName="구분" />
+                <ScalarProperty Name="상품주문번호" ColumnName="상품주문번호" />
+                <ScalarProperty Name="주문번호" ColumnName="주문번호" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="없음" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,89 @@
+﻿@model IEnumerable<SalesSite.Models.SalesMarket>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>판매 목록</h2>
+
+<table class="table">
+    <tr>
+        <th style="width:50px">
+            정산
+        </th>
+        <th style="width:90px">
+            발주일
+        </th>
+        <th style="width:90px">
+            정산완료일
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.송장번호)
+        </th>
+        <th style="width:80px">
+            @Html.DisplayNameFor(model => model.수취인명)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.제품명)
+        </th>
+        <th style="width:50px">
+            @Html.DisplayNameFor(model => model.수량)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.공급가)
+        </th>
+        <th style="width:60px">
+            @Html.DisplayNameFor(model => model.택배비)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.주문번호)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @if (item.Market.Equals("AG"))
+            {
+                <img src="@Url.Content("~/Content/Images/AG.png")" width="40" height="24" />
+            }
+            else if (item.Market.Equals("11"))
+            {
+                <img src="@Url.Content("~/Content/Images/11.png")" width="40" height="24" />
+            }
+            else if (item.Market.Equals("SF"))
+            {
+                <img src="@Url.Content("~/Content/Images/SF.png")" width="40" height="24" />
+            }
+        </td>
+        <td>
+            @Convert.ToString(string.Format("{0:d}", item.일자))
+        </td>
+        <td>
+            @Convert.ToString(string.Format("{0:d}", item.PaymentDate))
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.송장번호)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.수취인명)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.제품명)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.수량)
+        </td>
+        <td>
+            @Convert.ToDecimal(item.공급가).ToString("N0")
+        </td>
+        <td>
+            @Convert.ToDecimal(item.택배비).ToString("N0")
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.주문번호)
+        </td>
+    </tr>
+}
+
+</table>
